@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Energy Australia coding test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Requirements:
+https://eacp.energyaustralia.com.au/codingtest
 
-## Available Scripts
+Screencast:
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://user-images.githubusercontent.com/22624099/219223642-b5c6cb1e-aea2-4aaa-9dee-582b4d5766e9.mp4
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ChatGPT prompt:
 
-### `npm run build`
+```
+make a react application to these specs
+given this data:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[{"name":"LOL-palooza","bands":[{"name":"Winter Primates","recordLabel":""},{"name":"Frank Jupiter","recordLabel":"Pacific Records"},{"name":"Jill Black","recordLabel":"Fourth Woman Records"},{"name":"Werewolf Weekday","recordLabel":"XS Recordings"}]},{"name":"Small Night In","bands":[{"name":"Squint-281","recordLabel":"Outerscope"},{"name":"The Black Dashes","recordLabel":"Fourth Woman Records"},{"name":"Green Mild Cold Capsicum","recordLabel":"Marner Sis. Recording"},{"name":"Yanke East","recordLabel":"MEDIOCRE Music"},{"name":"Wild Antelope","recordLabel":"Marner Sis. Recording"}]},{"name":"Trainerella","bands":[{"name":"Wild Antelope","recordLabel":"Still Bottom Records"},{"name":"Manish Ditch","recordLabel":"ACR"},{"name":"Adrian Venti","recordLabel":"Monocracy Records"},{"name":"YOUKRANE","recordLabel":"Anti Records"}]},{"name":"Twisted Tour","bands":[{"name":"Summon","recordLabel":"Outerscope"},{"name":"Auditones","recordLabel":"Marner Sis. Recording"},{"name":"Squint-281"}]},{"bands":[{"name":"Critter Girls","recordLabel":"ACR"},{"name":"Propeller","recordLabel":"Pacific Records"}]}]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+using javascript, list out music festival data in a particular manner: at the top level, it should show the band record label, below that it should list out all bands under their management, and below that it should display which festivals they've attended, if any. All entries should be sorted alphabetically.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For example:
 
-### `npm run eject`
+Record Label 1
+  Band X
+    Omega Festival
+  Band Y
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Record Label 2
+  Band A
+    Alpha Festival
+    Beta Festival
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+the react application must include all components in a single file
+implement all the required functions
+use fetch, not axios
+the url for the data is  https://corsproxy.io/?https://eacp.energyaustralia.com.au/codingtest/api/v1/festivals
+display an error if the return code is not 200
+implement the display of the festivals  as a separate react component
+anywhere that the record label field is empty or undefined or null, use the string "No record label"
+put the display of festivals in the same code file
+when displaying the band name, use css to indent 2em from left
+when displaying the festival name, use css to indent 4em from left
+all the code must be in a single file
+present the output in a browser
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
